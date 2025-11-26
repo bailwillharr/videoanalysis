@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.25)
 
 project(videoanalysis)
 
+set(OpenCV_ARCH "x64")
+set(OpenCV_RUNTIME vc16)
 if (WIN32)
 set(OpenCV_DIR "../opencv/build")
 endif()
@@ -16,3 +18,4 @@ endif()
 file(GLOB OpenCV_FFMPEG_DLL "${OpenCV_DIR}/bin/*.dll")
 
 add_subdirectory(simple_decoder)
+add_subdirectory(calibrate)
