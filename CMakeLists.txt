@@ -18,4 +18,7 @@ endif()
 file(GLOB OpenCV_FFMPEG_DLL "${OpenCV_DIR}/bin/*.dll")
 
 add_subdirectory(simple_decoder)
+add_subdirectory(text_decoder)
 add_subdirectory(calibrate)
+add_subdirectory(calibratetext)
+add_subdirectory(text_decoder2)
