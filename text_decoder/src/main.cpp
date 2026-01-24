@@ -152,11 +152,18 @@ int main()
 
 	auto boxes = loadCsvBoxes(bboxes_path);
 
-	cv::Mat H = (cv::Mat_<double>(3, 3) <<
-		0.9598, 0.0150, 37.9037,
-		-0.0320, 0.9926, 46.5147,
-		-0.0000, 0.0000, 1.0000
-		);
+	cv::Mat H{};
+	std::array<cv::Point2f, 4> srcPnts{};
+	srcPnts[0] = cv::Point2f(0, 0);
+	srcPnts[1] = cv::Point2f(1919, 0);
+	srcPnts[2] = cv::Point2f(0, 1079);
+	srcPnts[3] = cv::Point2f(1919, 1079);
+	std::array<cv::Point2f, 4> dstPnts{};
+	dstPnts[0] = cv::Point2f(38.9, 48.3);
+	dstPnts[1] = cv::Point2f(2010.3, -20.6);
+	dstPnts[2] = cv::Point2f(54.3, 1114.1);
+	dstPnts[3] = cv::Point2f(2022.2, 1126.5);
+	H = cv::findHomography(srcPnts, dstPnts);
 	cv::Mat H_inv = H.inv();
 
 	// order topleft, topright, bottomleft, bottomright

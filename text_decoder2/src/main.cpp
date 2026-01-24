@@ -447,6 +447,8 @@ int main()
 				cv::line(out, box[2], box[0], color, 5);
 				++i;
 			}
+			cv::Scalar color = measured_colors_per_section[index_to_sections[0]][j];
+			std::cout << "color: " << color << "\n";
 			cv::imshow("out", out);
 			cv::waitKey();
 		}
