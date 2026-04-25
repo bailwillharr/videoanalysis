@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/bailey/project/videoanalysis/linuxrelease/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/simple_decoder/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/text_decoder/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/calibrate/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/calibratetext/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/text_decoder2/cmake_install.cmake",
+		"/home/bailey/project/videoanalysis/linuxrelease/ratetest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

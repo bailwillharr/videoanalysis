@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(text_decoder LANGUAGES CXX)
+project(ratetest LANGUAGES CXX)
 
 set(SRC_FILES
   "src/main.cpp"
